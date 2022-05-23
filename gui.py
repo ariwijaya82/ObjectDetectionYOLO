@@ -10,9 +10,9 @@ from detection import *
 confthres=0.5
 nmsthres=0.1
 
-weight_path = os.path.sep.join(['./', 'yolov4-obj_final.weights'])
-config_path = os.path.sep.join(['./', 'cfg/yolov4-obj.cfg'])
-label_path = os.path.sep.join(['./', 'obj.names'])
+weight_path = os.path.sep.join(['data/', 'yolov4-obj_final.weights'])
+config_path = os.path.sep.join(['data/', 'yolov4-obj.cfg'])
+label_path = os.path.sep.join(['data/', 'obj.names'])
 
 net = get_net(weight_path, config_path)
 classes, colors = get_classes_and_colors(label_path)
@@ -45,7 +45,7 @@ class MainWindow(QWidget):
 class Worker1(QThread):
     ImageUpdate = pyqtSignal(QImage)
     def run(self):
-        frame = cv2.imread("botol1.jpg")
+        frame = cv2.imread("data/botol1.jpg")
         detect(frame, net, classes, colors, confthres, nmsthres)
         ConvertToQtFormat = QImage(frame.data, frame.shape[1], frame.shape[0], QImage.Format_RGB888)
         Pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
