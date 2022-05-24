@@ -2,10 +2,11 @@
 
 This project is about implementing yolo for object detection
 
-Download pre-trained weight file by run this command first
-```ini
-wget https://pjreddie.com/media/files/yolov3.weights
-```
+Implemented from https://github.com/flytocc/pyqt5-cv2-multithreaded
+
+Download pre-trained weight file and put it in data folder in this directory,
+then rename it by 'final.weights'
+
 
 Run program by
 ```ini
