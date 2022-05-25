@@ -24,9 +24,9 @@ class ImageWorker(QThread):
     ImageUpdate = pyqtSignal(QImage)
 
     def run(self):
-        weight_path = os.path.sep.join(['data/', 'final.weights'])
-        config_path = os.path.sep.join(['data/', 'obj.cfg'])
-        label_path = os.path.sep.join(['data/', 'obj.names'])
+        weight_path = os.path.sep.join(['data/', 'training.weights'])
+        config_path = os.path.sep.join(['data/', 'obj2.cfg'])
+        label_path = os.path.sep.join(['data/', 'obj2.names'])
         video_path = os.path.sep.join(['data/', 'test.mp4'])
         image_path = os.path.sep.join(['data/', 'test.jpg'])
 

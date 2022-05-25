@@ -18,7 +18,6 @@ class ProcessingThread(QThread):
     weight_path = os.path.sep.join(['data/', 'final.weights'])
     config_path = os.path.sep.join(['data/', 'obj.cfg'])
     label_path = os.path.sep.join(['data/', 'obj.names'])
-    video_path = os.path.sep.join(['data/', 'test.mp4'])
 
     confthres=0.5
     nmsthres=0.1
