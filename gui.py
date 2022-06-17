@@ -1,6 +1,5 @@
 import sys
 import os
-import cv2
 from time import sleep
 
 from PyQt5.QtGui import QImage, QPixmap
@@ -17,6 +16,7 @@ from PyQt5.QtWidgets import (
     QVBoxLayout,
     QWidget
 )
+import cv2
 
 from detection import *
 
@@ -25,8 +25,8 @@ class ImageWorker(QThread):
 
     def run(self):
         weight_path = os.path.sep.join(['data/', 'training.weights'])
-        config_path = os.path.sep.join(['data/', 'obj2.cfg'])
-        label_path = os.path.sep.join(['data/', 'obj2.names'])
+        config_path = os.path.sep.join(['data/', 'obj.cfg'])
+        label_path = os.path.sep.join(['data/', 'obj.names'])
         video_path = os.path.sep.join(['data/', 'test.mp4'])
         image_path = os.path.sep.join(['data/', 'test.jpg'])
 

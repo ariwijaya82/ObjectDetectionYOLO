@@ -15,7 +15,7 @@ class ProcessingThread(QThread):
     updateStatisticsInGUI = pyqtSignal(ThreadStatisticsData)
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
 
-    weight_path = os.path.sep.join(['data/', 'final.weights'])
+    weight_path = os.path.sep.join(['data/', 'training.weights'])
     config_path = os.path.sep.join(['data/', 'obj.cfg'])
     label_path = os.path.sep.join(['data/', 'obj.names'])
 
